@@ -1,16 +1,16 @@
 local plugins = {
   {
     "NvChad/NvChad",
-    lazy = false
   },
   {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "nvcad",
         "black",
         "debugpy",
         "mypy",
-        "ruff-lsp",
+        "ruff",
         "pyright"
       },
     },
@@ -23,10 +23,11 @@ local plugins = {
     end
   },
   {
-    "mfussenegger/nvim-dap"
-  },
-  {
-    "rcarriga/nvim-dap-ui"
+    "jose-elias-alvarez/null-ls.nvim",
+    ft = {"python"},
+    opts = function ()
+      return require "configs.null-ls"
+    end
   }
 }
 return plugins

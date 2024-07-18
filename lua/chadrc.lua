@@ -3,7 +3,6 @@
 
 ---@type ChadrcConfig
 local M = {}
-
 M.ui = {
 	theme = "ayu_dark",
 
@@ -12,5 +11,4 @@ M.ui = {
 	-- 	["@comment"] = { italic = true },
 	-- },
 }
-
 return M
